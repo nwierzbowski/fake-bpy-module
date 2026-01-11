@@ -11,6 +11,8 @@ on:   # yamllint disable-line rule:truthy
   release:
     types:
       - released
+  workflow_dispatch:    # <--- Add this line
+
 
 jobs:
   set_versions:
