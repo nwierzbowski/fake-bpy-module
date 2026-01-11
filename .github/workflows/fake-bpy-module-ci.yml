@@ -57,9 +57,9 @@ jobs:
       - name: Get supported Blender versions for CI
         id: get_target_versions
         run: |
-          VERSIONS_YAML="src/versions.yml"
-          VERSIONS_JSON=$(yq  ".SUPPORTED_BLENDER_VERSIONS_BASE" "$VERSIONS_YAML" -o=json)
-          echo ::set-output name=target_versions::$VERSIONS_JSON
+          # Hardcode the version to only 4.5
+          echo ::set-output name=target_versions::["4.5"]
+
 
   build_modules:
     name: Build modules
